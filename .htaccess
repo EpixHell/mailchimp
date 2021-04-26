@@ -1,0 +1,18 @@
+Options -Multiviews
+<IfModule mod_rewrite.c>
+	Options +FollowSymLinks
+	RewriteEngine on
+	RewriteBase /mailchimp
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !-l
+	# Réécriture des urls
+	RewriteRule users/?$ users.php [NC,L]
+	RewriteRule users/(.*)$ users.php?id=$1 [QSA,NC,L]
+	RewriteRule list/?$ list.php [NC,L]
+	RewriteRule import/?$ import.php [NC,L]
+</IfModule>
+<Files "version">
+	Order allow,deny
+	Deny from all
+</Files>
