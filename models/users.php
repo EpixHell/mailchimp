@@ -10,13 +10,10 @@ use \DrewM\MailChimp\Batch;
 
 class users {
     private $MailChimp;
-    //private $api_endpoint = 'https://us13.api.mailchimp.com/3.0/';
-    //private $api_key = '16786e43a7b0c088d74907c18292e475-us13';
-    //private $listId = '7dc5f10983';
 
     private $api_endpoint = 'https://us18.api.mailchimp.com/3.0/';
-    private $api_key = '3a7675c53bd91039d3d052bb8a77cf3c-us18';
-    private $listId = '77964287b8';
+    private $api_key = 'abc123abc123abc123abc123abc123-us1';
+    private $listId = 'b1234346';
 
     private $verify_ssl = false;
     const TIMEOUT = 10;
